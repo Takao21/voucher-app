@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Voucher</title>
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <form class="listingmethods" id="fakeForm">
+    <label for="itemName">ITEM:</label>
+    <select class="itemName" name="itemName" id="item">
+      <option value="ကြက်ဥ">ကြက်ဥ</option>
+      <option value="ဘဲဥ">ဘဲဥ</option>
+      <option value="​ဆေးဘဲဥ၊ ဆင်">​ဆေးဘဲဥ၊ ဆင်</option>
+      <option value="​ဆေးဘဲဥ၊ ချစ်စရာ">​ဆေးဘဲဥ၊ ချစ်စရာ</option>
+      <option value="ကဒ်​ပေါင်(200)">ကဒ်​ပေါင် (၂၀၀ တန်)</option>
+      <option value="ကဒ်​ပေါင်(400)">ကဒ်​ပေါင် (၄၀၀ တန်)</option>
+
+    </select>
+    <p class="inline-p">---</p>
+    <label for="Weight">WEIGHT:</label>
+    <select class="itemSize" name="Weight" id="itemWt">
+      <option value="---">---</option>
+      <option value="16">16</option>
+      <option value="16.5">16.5</option>
+      <option value="17">17</option>
+      <option value="17.5">17.5</option>
+      <option value="18">18</option>
+      <option value="18.5">18.5</option>
+      <option value="19">19</option>
+      <option value="19.5">19.5</option>
+      <option value="20">20</option>
+      <option value="20.5">20.5</option>
+      <option value="21">21</option>
+      <option value="21.5">21.5</option>
+      <option value="22">22</option>
+      <option value="22.5">22.5</option>
+      <option value="23">23</option>
+    </select>
+    <p class="inline-p">Kg</p>
+    <p class="inline-p">---</p>
+    <label for="StackQty">တွဲ</label>
+    <input type="number" name="StackQty" value=""  id="Stacks">
+    <p class="inline-p">---</p>
+    <label for="Count">လုံး​ရေ / အ​ရေအတွက်</label>
+    <input type="number" name="Count" value="" id="Count">
+    <p class="inline-p">---</p>
+    <label for="PriceRate">စျေးနှုန်း</label>
+    <input type="number" name="PriceRate" value="" id="Rate"> Ks
+    <p class="inline-p">-----</p>
+    <button type="button" name="AddItem" onclick="GetFormData()">ထည့်တွက်မည်</button>
+    <!-- <button type="reset" name="Reset" value="">နောက်တစ်​​ကြောင်း</button> -->
+  </form>
+
+  <div class="endingCalculations">
+    <label for="">ပေး​ငွေ</label>
+    <input type="number" name="paidCash" value="" id="paidCash">
+    <button type="button" name="writePaid" onclick="endingFunc()">​ငွေ​ချေမည်</button>
+  </div>
+
+  <div id="printArea">
+    <div class="heading">
+      <h1>ကိုစန်း​​အေး</h1>
+      <h2>ကြက်ဥ၊ ဘဲဥ၊ ​ဆေးဘဲဥ ​ရောင်းဝယ်​ရေး</h2>
+      <h3>အမှတ် ၂၃၊ ၁၃လမ်း(​အောက်)၊ လမ်းမ​တော်မြို့နယ်၊ ရန်ကုန်မြို့ </h3>
+      <h3><i class="fa fa-phone" style="font-size:24px; vertical-align: middle;"></i>  ၀၉ ၅၅၀ ၁၂၈၀၊ ၀၉ ၉၆ ၅၅၀ ၁၂၈၀၊ ၀၉ ၇၃၀၀ ၉၀၀၉။</h3>
+    </div>
+    <hr>
+    <div class="id_div">
+      <p>Date/Time: <span id="datetime"></span></p>
+      <p>Voucher ID:<span id="voucherID"></span></p>
+    </div>
+
+    <hr>
+    <div class="titles">
+      <h3>ပစ္စည်းအမျိုးအမည် နှင့် အ​ရေအတွက်</h3>
+      <h3>ကျသင့်​ငွေ</h3>
+    </div>
+    <div class="listingArea">
+      <div class="printDiv" id="printDivID">
+        <span id="listItem"></span>
+        <span id="linePrice"></span>
+      </div>
+
+    </div>
+    <hr>
+    <div class="summationArea">
+      <span id="labelTOTAL">TOTAL:</span>
+      <span id="TOTAL"></span>
+    </div>
+    <div class="paidcashArea">
+      <span id="labelPAID">PAID:</span>
+      <span id="PAID"></span>
+    </div>
+    <div class="changeArea">
+      <span id="labelCHANGE">CHANGE:</span>
+      <span id="CHANGE"></span>
+    </div>
+    <h4 id="Thankyou">ဝယ်ယူအား​ပေးမှုအတွက် ​ကျေးဇူးတင်ပါသည်။ ^_^</h4>
+  </div>
+  <button type="button" name="buttonPrint" onclick="CopyAndPrint()" id="printvoucher">ဘောက်ချာထုတ်မည်</button>
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>

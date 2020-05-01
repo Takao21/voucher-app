@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5px 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  /* background: linear-gradient(#26c5de, #bdd1f0); */
+  height: 100vh;
+  position: relative;
+
+  animation-name: DancingBG;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes DancingBG {
+  0% {background: linear-gradient(#ead0f5, #bdd1f0);}
+  30% {background: linear-gradient( #bdd1f0, #ead0f5 , #bdd1f0)}
+  70% {background: linear-gradient(#bdd1f0, #ead0f5);}
+  100% {background: linear-gradient(#ead0f5, #bdd1f0);}
+
+}
+
+select:hover , input:hover {
+  background-color: #87ffaf;
+}
+
+input:focus {
+  background-color: #f5d8b5;
+}
+
+input , select {
+  height: 30px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  padding: 7px 9px;
+  margin: 5px 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 5px #4cf579, 0px -3px 5px #4cf579, 3px 0px 5px #4cf579, -3px 0px 5px #4cf579;
+  font-weight: bold;
+}
+
+#printArea {
+  border: 3px dashed #283bb0;
+}
+
+.heading {
+  text-align: center;
+}
+
+.id_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.id_div > p {
+  margin: 0px 5px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titles > h3 {
+  margin: 0px 5px;
+
+}
+
+.inline-p {
+  display: inline-block;
+}
+
+.listingArea > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px 5px;
+}
+
+.summationArea , .paidcashArea , .changeArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px 5px;
+}
+
+#Thankyou {
+  text-align: center;
+}
+
+#printvoucher {
+  margin: 6px 0px;
+  box-shadow: 0px -3px 6px black;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-out;
+
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 35%;
+  padding: 20px 50px;
+  font-size: 1.2em;
+
+  position: sticky;
+  bottom: 0;
+}
+
+#printvoucher:hover {
+  opacity: 1;
+  transform: translate(0);
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
